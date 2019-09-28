@@ -23,7 +23,7 @@ public class Mqtt {
              client.connect();
              client.subscribe("derecha");
              client.subscribe("izquierda");
-             client.subscribe("golpe");
+             client.subscribe("golpe");  
          }
          catch (MqttException e) {
              e.printStackTrace();
