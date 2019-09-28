@@ -6,8 +6,10 @@ import java.awt.Robot;*/
 
 public class Mqtt {
 	 static MqttClient client;
+	 public static final String BROKER_URL = "tcp://localhost:1883";
 	public static void main(String[] args) {
 		
+		String url = args[0];
         String clientId = "cliente";
         final String TOPIC = "jamtoday/vara";
         
@@ -15,6 +17,7 @@ public class Mqtt {
             client = new MqttClient(BROKER_URL, clientId);
             client.setCallback(new SubscribeCallback());
             client.connect();
+            System.out.println("Entra");
             client.subscribe(TOPIC);
         }
         catch (MqttException e) {
@@ -23,7 +26,7 @@ public class Mqtt {
         }
         
 	}
-	public static final String BROKER_URL = "tcp://192.168.43.215:1883";
+	
     
 
     public Mqtt() {

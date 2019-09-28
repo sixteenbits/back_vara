@@ -21,15 +21,15 @@ public class SubscribeCallback implements MqttCallback {
     	 switch(tecla) {
     	 //IZQUIERDA
     	 case 'l':
-    		 robot.keyPress(65);
+    		 robot.keyPress(90);
     		 break;
     		 //GOLPE
     	 case 'v':
-    		 robot.keyPress(83);
+    		 robot.keyPress(88);
     		 break;
     		 //DERECHA
     	 case 'r':
-    		 robot.keyPress(68);
+    		 robot.keyPress(67);
     		 break;
     	 }
      }
