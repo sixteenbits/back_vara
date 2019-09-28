@@ -16,22 +16,22 @@ public class SubscribeCallback implements MqttCallback {
 			e.printStackTrace();
 		}
     	 
-          System.out.println(topic + ": " + message.toString());
-          char tecla = message.toString().charAt(0);
-          switch(tecla) {
-          //IZQUIERDA
-          case 'l':
-        	  robot.keyPress(65);
-        	  break;
-        	  //GOLPE
-          case 'v':
-        	  robot.keyPress(83);
-        	  break;
-        	  //DERECHA
-          case 'r':
-        	  robot.keyPress(68);
-        	  break;
-          }
+    	 System.out.println(topic + ": " + message.toString());
+    	 char tecla = message.toString().charAt(0);
+    	 switch(tecla) {
+    	 //IZQUIERDA
+    	 case 'l':
+    		 robot.keyPress(65);
+    		 break;
+    		 //GOLPE
+    	 case 'v':
+    		 robot.keyPress(83);
+    		 break;
+    		 //DERECHA
+    	 case 'r':
+    		 robot.keyPress(68);
+    		 break;
+    	 }
      }
 
      public void deliveryComplete(IMqttDeliveryToken token) {}
