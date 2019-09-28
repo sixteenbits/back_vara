@@ -21,8 +21,9 @@ public class Mqtt {
          try {
              client.setCallback(new SubscribeCallback());
              client.connect();
-             client.subscribe("/sensorA/#");
-             client.subscribe("/sensorB/#");
+             client.subscribe("derecha");
+             client.subscribe("izquierda");
+             client.subscribe("golpe");
          }
          catch (MqttException e) {
              e.printStackTrace();
